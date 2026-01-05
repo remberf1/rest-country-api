@@ -1,0 +1,26 @@
+@use './variables' as vars;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: vars.$blue-950;
+    color: vars.$white;
+}
+
+.darkmode_container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+.button{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    background-color: transparent;
+    color: vars.$white;
+    cursor: pointer;
+}

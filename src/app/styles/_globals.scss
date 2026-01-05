@@ -1,0 +1,30 @@
+@import "variables";
+
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+/* =========================
+   CSS Reset / Base
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-home;
+  font-weight: $font-weight-light;
+  line-height: 1.6;
+  background-color: $grey-50;
+  color: $grey-950;
+}
+
+html.dark body {
+  background-color: $blue-950;
+  color: $white;
+}
