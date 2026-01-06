@@ -15,13 +15,15 @@ function Navbar(){
         }
     },[darkMode]);
     return(
-        <div className={styles.navbar} >
+        <div className={`${styles.navbar} `} >
             Where in the world?
-        <div className={styles.darkmode_container}>
+        <div className={styles.theme_container}>
             <button className={styles.button} onClick={() => setDarkMode(prev => !prev)
             }>
-            <Moon />
-            Dark mode
+            <Moon strokeWidth={1}
+            
+            size={14} />
+            <p className={styles.text}>Dark Mode</p>
             </button>
         </div>
         </div>

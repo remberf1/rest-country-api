@@ -5,22 +5,42 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: vars.$blue-950;
+    background-color: vars.$white;
+    color: vars.$grey-950;
+    font-weight:vars.$font-weight-extra-bold;
+}
+:global(.dark) .navbar {
+  background-color: vars.$blue-900;
+  color: vars.$white;
+  & .text{
     color: vars.$white;
+  }
+}
+:global(.dark) .button svg {
+  fill: white;
 }
 
-.darkmode_container {
+.text{
+    color: vars.$grey-950;
+}
+
+.theme_container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
 }
+
 .button{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     border: none;
     background-color: transparent;
-    color: vars.$white;
+    color: vars.$grey-950;
     cursor: pointer;
+    svg {
+    display: block;
+  }
 }
