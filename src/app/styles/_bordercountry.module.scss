@@ -1,0 +1,12 @@
+@use './variables' as vars;
+
+
+.grid{
+    display: inline-block;
+    padding: .15rem 1rem;
+    background-color: vars.$white;
+    color: vars.$grey-950;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.4);
+    margin-right:0.5rem;
+}
+

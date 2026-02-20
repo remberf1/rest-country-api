@@ -1,0 +1,11 @@
+@use './variables' as vars;
+
+.title {
+    
+    font-weight: vars.$font-weight-semi-bold;
+}
+
+.detail_item{
+    font-weight: vars.$font-weight-light;
+    padding-bottom: .35rem;
+}
