@@ -1,0 +1,99 @@
+@use './variables' as vars;
+
+.filterContainer {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+}
+
+
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px; 
+  font-size: 16px;
+  background-color: vars.$white;
+  cursor: pointer;
+  text-align: left;
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  :global(.dark) & {
+    background-color: vars.$blue-900;
+    color: vars.$white;
+  }
+}
+
+.chevronIcon {
+  color: #999;
+  transition: transform 0.2s ease;
+  
+  &.rotated {
+    transform: rotate(180deg);
+  }
+  
+  :global(.dark) & {
+    color: vars.$white;
+  }
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding:12px;
+  background-color: vars.$white;
+  border: none;
+  border-radius: 15px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  z-index: 1000;
+  max-height: 250px;
+  
+  
+  :global(.dark) & {
+    background-color: vars.$blue-900;
+    color: vars.$white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.dropdownItem {
+  padding: 4px 0px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  
+  &:hover {
+    background-color: vars.$grey-50;
+  }
+  
+  &.selected {
+    background-color: vars.$grey-50;
+    font-weight: 500;
+  }
+  
+  :global(.dark) & {
+    &:hover {
+      background-color: vars.$blue-950;
+    }
+    
+    &.selected {
+      background-color: vars.$blue-950;
+    }
+  }
+}

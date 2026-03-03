@@ -11,7 +11,7 @@ export default function DetailView() {
   // For this layout fix, I will keep your hardcoded values so the structure works.
   
   return (
-    <div className="">
+    <div className={styles.container}>
       {/* Back button row */}
       <div className="">
         <BackButton />

@@ -1,0 +1,55 @@
+@use './variables' as vars;
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 400px; // Adjust as needed
+  background-color: vars.$white;
+  padding: 1rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.searchIcon {
+  color: vars.$grey-400;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0px 0px 0px 1.5rem; // Extra left padding for icon
+  border: transparent;
+  font-size: 12px;
+  background-color: transparent;
+  
+  &::placeholder {
+    color: #999;
+  }
+  
+  &:focus {
+    outline: none;
+    border-color: #666;
+  }
+  
+  // Remove default search input styling in some browsers
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+}
+
+:global(.dark) {
+   &::placeholder{
+    color: vars.$white;
+   }
+   .container{
+    background-color: vars.$blue-900;
+   }
+   .searchIcon{
+    color: vars.$white;
+   }
+}
