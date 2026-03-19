@@ -26,7 +26,7 @@ export default function Home() {
         <SearchButton onSearch={setSearchQuery} />
         <FilterButton onFilterChange={setSelectedRegion} />
       </div>
-      <div className="grid">
+      <div className="grid grid-cols-4 gap-4">
         {filteredCountries.map((country) => (
           <CountryCard key={country.name} country={country} />
         ))}
