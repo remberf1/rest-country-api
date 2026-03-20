@@ -8,23 +8,37 @@ interface CountryCardProps {
     name: string;
     population: number;
     region: string;
-    capital: string;
+    capital?: string;
     flag: string;
+    alpha3Code: string; // Add this so we can link by code
   };
 }
 
 export default function CountryCard({ country }: CountryCardProps) {
   return (
-    <Link href={`/country/${encodeURIComponent(country.name)}`} className={styles.cardLink}>
-      <div className={styles.card}>
-        <Image src={country.flag} width={500} height={360} alt={`Flag of ${country.name}`} className={styles.flag} />
+    /* Change the href to use alpha3Code */
+    <Link 
+      href={`/country/${country.alpha3Code.toLowerCase()}`} 
+      className={styles.cardLink}
+    >
+      <article className={styles.card}>
+        <div className={styles.flagWrapper}>
+          <Image 
+            src={country.flag} 
+            alt={`Flag of ${country.name}`} 
+            fill 
+            sizes="264px"
+            className={styles.flag}
+            priority={false}
+          />
+        </div>
         <div className={styles.content}>
           <h3>{country.name}</h3>
           <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
           <p><strong>Region:</strong> {country.region}</p>
-          <p><strong>Capital:</strong> {country.capital}</p>
+          <p><strong>Capital:</strong> {country.capital || 'N/A'}</p>
         </div>
-      </div>
+      </article>
     </Link>
   );
 }

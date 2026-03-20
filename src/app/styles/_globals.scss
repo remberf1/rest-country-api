@@ -36,3 +36,28 @@ html.dark body {
   display:flex;
   justify-content: space-between;
 }
+/* _globals.scss */
+
+.countryGrid {
+  display: grid;
+  /* Use a much larger gap to match the Figma design (approx 75px) */
+  gap: 70px; 
+  
+  /* This creates the responsive 4-column layout without needing media queries */
+  grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+  
+  padding: 40px 0;
+  justify-items: center;
+  width: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
+  
+  /* Mobile adjustment for the container padding */
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+}
