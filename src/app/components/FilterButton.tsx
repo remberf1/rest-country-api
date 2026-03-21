@@ -16,9 +16,8 @@ export default function FilterButton({
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const regions = [
-    "Filter by Region",
     "Africa",
-    "America", 
+    "Americas", 
     "Asia",
     "Europe",
     "Oceania"

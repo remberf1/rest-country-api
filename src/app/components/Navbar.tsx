@@ -16,7 +16,7 @@ function Navbar(){
     },[darkMode]);
     return(
         <div className={`${styles.navbar} `} >
-            Where in the world?
+           <p className={styles.title}> Where in the world?</p>
         <div className={styles.theme_container}>
             <button className={styles.button} onClick={() => setDarkMode(prev => !prev)
             }>

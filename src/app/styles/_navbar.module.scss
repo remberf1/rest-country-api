@@ -8,6 +8,7 @@
     background-color: vars.$white;
     color: vars.$grey-950;
     font-weight:vars.$font-weight-extra-bold;
+
 }
 :global(.dark) .navbar {
   background-color: vars.$blue-900;
@@ -22,7 +23,12 @@
 
 .text{
     color: vars.$grey-950;
+    font-size: vars.$font-size-home;
 }
+.title{
+    font-size: vars.$font-size-detail;
+    font-weight: vars.$font-weight-extra-bold;
+  }
 
 .theme_container {
     display: flex;
