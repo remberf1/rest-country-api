@@ -5,7 +5,9 @@ import "./styles/_globals.scss";
 import SearchButton from "./components/SearchButton";
 import FilterButton from "./components/FilterButton";
 import CountryCard from "./components/CountryCard";
-import data from './data.json'; // Import your data
+import data from './data.json';
+
+
 
 export default function Home() {
   const [countries, setCountries] = useState(data);
@@ -26,8 +28,6 @@ export default function Home() {
       <SearchButton onSearch={setSearchQuery} />
       <FilterButton onFilterChange={setSelectedRegion} />
     </div>
-
-    {/* Replace grid grid-cols-4 gap-4 with this */}
     <div className="countryGrid">
       {filteredCountries.map((country) => (
         <CountryCard key={country.name} country={country} />
